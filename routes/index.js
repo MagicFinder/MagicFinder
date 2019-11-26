@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
-
+/* GET to cardfinder */
 router.get("/cardfinder", (req, res) => {
   res.render("cardfinder");
 });

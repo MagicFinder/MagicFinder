@@ -18,7 +18,7 @@ function getMagicInfo(theName) {
       const cardPrice = responseFromAPI.data.prices.usd ////mas de un valor ?
       
 
-      console.log(price);
+      
       // instead in the console, show data in the browser using JS DOM manipulation:
       document.getElementById("cardName").innerHTML = cardName;
       document.getElementById("cardId").innerHTML = "Card ID: " + cardId;
@@ -70,11 +70,11 @@ function checkInput() {
   }
 }
 
-document.getElementById("theButton").onclick = function() {
-  removeErrDiv();
-  const card = document.getElementById("theInput").value;
-  getMagicInfo(card);
-};
+// document.getElementById("theButton").onclick = function() {
+//   removeErrDiv();
+//   const card = document.getElementById("theInput").value;
+//   getMagicInfo(card);
+// };
 
   
   
