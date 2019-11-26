@@ -13,6 +13,13 @@ router.get('/', (req, res, next) => {
     .catch(err => console.log(err))
 });
 
+router.get('/api', (req, res, next) => {
+  // res.render('events');
+  Event.find()
+    .then(allEvents => res.json(allEvents))
+    .catch(err => console.log(err))
+});
+
 
 
 module.exports = router;
