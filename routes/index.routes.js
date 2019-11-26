@@ -8,30 +8,12 @@ router.get("/", (req, res) => {
 });
 
 
-router.get("/cardfinder", (req, res) => {
-  res.render("cardfinder");
-});
 
 
 
 
-// router.get('/events', (req, res, next) => {
-//   // res.render('events');
-//   Event.find()
-//     .then(allEvents => res.render('events', {
-//       events: allEvents
-//     }))
-//     .catch(err => console.log(err))
-// });
 
-// router.get('/', (req, res) => {
-//   console.log("entraaa")
-//   Event.find()
-//     .then(allEvents => res.render('events', {
-//       events: allEvents
-//     }))
-//     .catch(err => console.log(err))
-// })
+
 
 
 module.exports = router;

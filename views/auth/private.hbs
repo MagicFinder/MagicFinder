@@ -1,11 +1,45 @@
+
+
 <h2>Personal Page</h2>
-<br>
-{{#if user}}
-<h4>Welcome to Mtg Finder {{user.username}}</h4>
 
-<img src="{{user.imgPath}}" alt="">
+<p>Here you can edit your profile data, create you personal card collection</p>
 
-<p>here you can edit your profile data, create you personal card collection</p>
+<div class="container">
+  <div class="row">
+<div class="col-sm-6">
+
+
+<p>{{allCards.username}}</p>
+
+<img src="{{allCards.imgPath}}" alt="">
+
+
+<h5>Your Contact method</h5>
+<p>{{allCards.email}}</p>
+
+
+<h5>Your Cards</h5>
+
+{{!-- {{#if user}}
+
+
+
+
+
+
+
+
+
+<p>{{user.cards}}</p>
+
+</div>
 {{/if}}
+
+  </div>
+</div> --}}
+
+
+
+
 
 

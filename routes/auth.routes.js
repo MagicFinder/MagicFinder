@@ -1,24 +1,16 @@
 const express = require("express");
-const passport = require('passport');
+const passport = require("passport");
 const router = express.Router();
 const User = require("../models/User.model");
+const Card = require("../models/Card.model");
 const ensureLogin = require("connect-ensure-login");
-
 
 const uploadCloud = require("../configs/cloudinary.config");
 const multer = require("multer");
 
-
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
-
-
-
-
-
-
-
 
 //// LOG IN MODULE
 
@@ -26,17 +18,19 @@ router.get("/succes", (req, res, next) => {
   res.render("auth/succes");
 });
 
-
 router.get("/login", (req, res, next) => {
-  res.render("auth/login", { "message": req.flash("error") });
+  res.render("auth/login", { message: req.flash("error") });
 });
 
-router.post("/login", passport.authenticate("local", {
-  successRedirect: "/auth/succes",
-  failureRedirect: "/auth/login",
-  failureFlash: true,
-  passReqToCallback: true
-}));
+router.post(
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/auth/succes",
+    failureRedirect: "/auth/login",
+    failureFlash: true,
+    passReqToCallback: true
+  })
+);
 
 //// SIGN UP MODULE
 
@@ -44,7 +38,7 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", uploadCloud.single('imgFile'), (req, res, next) => {
+router.post("/signup", uploadCloud.single("imgFile"), (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
   if (username === "" || password === "") {
@@ -60,8 +54,8 @@ router.post("/signup", uploadCloud.single('imgFile'), (req, res, next) => {
 
     const { username, email, password } = req.body;
 
-const imgPath = req.file.url;
-const imgName = req.file.originalname;
+    const imgPath = req.file.url;
+    const imgName = req.file.originalname;
 
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashPass = bcrypt.hashSync(password, salt);
@@ -74,34 +68,33 @@ const imgName = req.file.originalname;
       imgPath: imgPath
     });
 
-console.log(newUser)
+    console.log(newUser);
 
-    newUser.save()
+    newUser
+      .save()
       .then(() => {
-       res.redirect("/");
-    })
-    .catch(err => {
-      res.render("auth/signup", { message: "Something went wrong" });
-    })
+        res.redirect("/");
+      })
+      .catch(err => {
+        res.render("auth/signup", { message: "Something went wrong" });
+      });
   });
 });
+
+/// LOG OUT 
 
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");
 });
 
-
 /// PRIVATE AREA AUTH
 
-
 router.get("/privatepage", ensureLogin.ensureLoggedIn(), (req, res) => {
-  res.render("auth/private", { user: req.user });
+  User.findById(req.user._id)
+    .populate("cards")
+    .then(allCards => res.render("auth/private", { allCards }))
+    .catch(err => console.log(err));
 });
-
-router.get("/privatepage", (req, res) => {
-  res.render("auth/private");
-});
-
 
 module.exports = router;

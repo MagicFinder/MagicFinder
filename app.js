@@ -31,8 +31,9 @@ hbs.registerHelper("ifUndefined", (value, options) => {
   }
 });
 
-const apiRoutes = require("./routes/api/addCard");
+const apiRoutes = require("./routes/api/addCard.routes");
 app.use("/api", apiRoutes);
+
 const index = require("./routes/index.routes");
 app.use("/", index);
 
@@ -40,5 +41,7 @@ const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
 app.use("/events", require("./routes/event.routes"));
+
+app.use("/cardfinder", require("./routes/cardfinder.routes"));
 
 module.exports = app;

@@ -49,7 +49,8 @@ module.exports = app => {
     session({
       secret: "webmad1019",
       resave: true,
-      saveUninitialized: true
+      saveUninitialized: true,
+      
     })
   );
 
