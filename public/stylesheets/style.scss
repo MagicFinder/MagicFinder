@@ -1,9 +1,9 @@
 body {
-  
+
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
 
-background: rgb(255,247,214);
-background: radial-gradient(circle, rgba(255,247,214,1) 0%, rgba(193,219,250,1) 100%);
+  background: rgb(255, 247, 214);
+  background: radial-gradient(circle, rgba(255, 247, 214, 1) 0%, rgba(193, 219, 250, 1) 100%);
 }
 
 a {
@@ -11,6 +11,15 @@ a {
 }
 
 
-.loginform{
+.loginform {
   padding: 30px 0;
+}
+
+#map {
+  height: 500px;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 20px;
 }

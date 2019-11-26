@@ -12,6 +12,7 @@ require("./configs/mongoose.config");
 require("./configs/middlewares.config")(app);
 require("./configs/locals.config")(app);
 require("./configs/passport.config")(app);
+require("./public/javascripts/events")
 
 
 const session    = require("express-session");
@@ -38,11 +39,15 @@ hbs.registerHelper('ifUndefined', (value, options) => {
   
 
 
-const index = require('./routes/index');
+const index = require('./routes/index.routes');
 app.use('/', index);
 
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/auth.routes');
 app.use('/auth', authRoutes);
+
+
+app.use('/events', require('./routes/event.routes'));
+
       
 
 module.exports = app;

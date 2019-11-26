@@ -9,4 +9,11 @@ a {
 .loginform {
   padding: 30px 0; }
 
+#map {
+  height: 500px; }
+
+h2 {
+  text-align: center;
+  padding-bottom: 20px; }
+
 /*# sourceMappingURL=style.css.map */

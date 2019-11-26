@@ -74,6 +74,8 @@ const imgName = req.file.originalname;
       imgPath: imgPath
     });
 
+console.log(newUser)
+
     newUser.save()
       .then(() => {
        res.redirect("/");
