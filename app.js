@@ -11,6 +11,7 @@ require("./configs/mongoose.config");
 require("./configs/middlewares.config")(app);
 require("./configs/locals.config")(app);
 require("./configs/passport.config")(app);
+require("./public/javascripts/events");
 
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
@@ -30,13 +31,14 @@ hbs.registerHelper("ifUndefined", (value, options) => {
   }
 });
 
-const index = require("./routes/index");
-app.use("/", index);
-
-const authRoutes = require("./routes/auth");
-app.use("/auth", authRoutes);
-
 const apiRoutes = require("./routes/api/addCard");
 app.use("/api", apiRoutes);
+const index = require("./routes/index.routes");
+app.use("/", index);
+
+const authRoutes = require("./routes/auth.routes");
+app.use("/auth", authRoutes);
+
+app.use("/events", require("./routes/event.routes"));
 
 module.exports = app;
