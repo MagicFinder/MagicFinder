@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://localhost/magictest", {
+  .connect(`${process.env.DB}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

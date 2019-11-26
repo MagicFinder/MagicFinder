@@ -11,7 +11,7 @@ const Event = require("../models/Event.model")
 const bcryptSalt = 10;
 
 mongoose
-  .connect('mongodb://localhost/magictest', {
+  .connect("mongodb+srv://victor:victor1@cluster0-stbd0.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true
   })
   .then(x => {
@@ -30,7 +30,7 @@ let users = [{
     password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
   }
 ]
-
+  
 User.deleteMany()
   .then(() => {
     return User.create(users)
@@ -55,7 +55,7 @@ let events = [{
     phone: 9135246525,
     date: 25 / 03 / 2020,
     location: {
-      coordinates: [40.467443,-3.6190877]
+      coordinates: [40.467443, -3.6190877]
 
     }
   },
@@ -66,8 +66,8 @@ let events = [{
     phone: 913523425,
     date: 12 / 05 / 2020,
     location: {
-      coordinates: [40.4027972,-3.698186]
-      
+      coordinates: [40.4027972, -3.698186]
+
     }
   },
   {
