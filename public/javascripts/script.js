@@ -39,7 +39,7 @@ document.addEventListener(
 
         navigator.geolocation.getCurrentPosition(
           position => {
-            axios.get("https://magicfinder.herokuapp.com//events/api")
+            axios.get("https://magicfinder.herokuapp.com/events/api")
               .then(res => {
                 printMap(position.coords, res.data)
 
