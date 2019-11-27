@@ -8,7 +8,8 @@ router.get('/', (req, res, next) => {
   // res.render('events');
   Event.find()
     .then(allEvents => res.render('events', {
-      events: allEvents
+      events: allEvents,
+      user: req.user
     }))
     .catch(err => console.log(err))
 });

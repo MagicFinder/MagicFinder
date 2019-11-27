@@ -4,7 +4,10 @@ const Event = require("../models/Event.model")
 
 /* GET home page */
 router.get("/", (req, res) => {
-  res.render("index");
+  
+  res.render("index", {
+    user: req.user
+  });
 });
 
 

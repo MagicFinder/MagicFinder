@@ -21,6 +21,7 @@ document.addEventListener(
           cardPrice: document.getElementById("price").textContent
         }
 
+        // axios.post("https://magicfinder.herokuapp.com/api/addCard", {
         axios.post("http://localhost:3000/api/addCard", {
             cardDetail
           })
@@ -39,10 +40,11 @@ document.addEventListener(
 
         navigator.geolocation.getCurrentPosition(
           position => {
+            // axios.get("https://magicfinder.herokuapp.com/events/api")
             axios.get("http://localhost:3000/events/api")
               .then(res => {
                 printMap(position.coords, res.data)
-              
+
               })
               .catch(err => console.log(err))
 
