@@ -8,9 +8,11 @@ const userSchema = new Schema(
     email: String,
     imgName: String,
     imgPath: String,
+    city: String,
+    adress: String,
     location: { type: { type: String }, coordinates: [Number] },
-    cards: [{ type: Schema.Types.ObjectId, ref: "Card" }] // Referenciar un documento a través de 'ref', con el nombre del modelo a referenciar como valor
-
+    cards: [{ type: Schema.Types.ObjectId, ref: "Card" }],
+    cardonsale: [{type: Schema.Types.ObjectId, ref: "Card"}]
   },
   {
     timestamps: {

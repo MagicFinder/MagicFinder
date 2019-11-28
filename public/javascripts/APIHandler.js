@@ -28,10 +28,10 @@ function getMagicInfo(theName) {
       document.getElementById("price").innerHTML = cardPrice;
     })
     .catch(err => {
-      if (err.response.status === 404) {
-        removeCountryInfo();
+      if (err.response.status === 404) {        
+        removeCardInfo();
         createDiv();
-        const theErr = document.createTextNode(`What the heck is ${theName}? `);
+        const theErr = document.createTextNode(`Carta no encontrada `);
         errDiv.appendChild(theErr);
       } else {
         console.log("err => ", err);
