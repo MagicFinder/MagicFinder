@@ -2,6 +2,8 @@ const bcrypt = require("bcrypt");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
+const mongoose = require("mongoose");
 
 const User = require("../models/User.model");
 
@@ -50,7 +52,10 @@ module.exports = app => {
       secret: "webmad1019",
       resave: true,
       saveUninitialized: true,
-      
+      store: new MongoStore({
+        mongooseConnection: mongoose.connection,
+        ttl: 24 * 60 * 60 // 1 day
+      })
     })
   );
 

@@ -1,0 +1,45 @@
+{{!-- <h1>CARD MARKET</h1>
+
+{{#each users}}
+{{#if cardonsale.length}}
+<div>
+  <ul>
+  <li>Owner: {{this.username}}
+  </li>
+<a href="{{this.email}}" target="_blank" class="btn btn-primary">contact</a>
+  </li>
+  </ul>
+  <ul>
+  {{#each cardonsale}}
+  <h5>Cards on sale</h5>
+<li>Card name: {{cardName}}</li>
+<li><img alt="cardImage" src="{{cardImage}}"></li>
+<li>Price: {{cardPrice}}</li>
+</ul>
+</div>
+{{/each}}
+{{/if}}
+  {{/each}} --}}
+
+
+{{#each users}}
+{{#if cardonsale.length}}
+{{#each cardonsale}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+<b>User:</b><p>{{this.username}}</p>
+<a href="{{this.email}}" target="_blank" class="btn btn-primary btn-sm">contact</a>
+<h5>Cards on sale</h5>
+<p>Card name: {{cardName}}</p>
+<p>Price: {{cardPrice}}</p>
+<p>Description: {{cardDesc}}</p>
+    </div>
+    <div class="col-md-4">
+      <img alt="cardImage" src="{{cardImage}}">
+    </div>
+  </div>
+</div>
+{{/each}}
+{{/if}}
+{{/each}}

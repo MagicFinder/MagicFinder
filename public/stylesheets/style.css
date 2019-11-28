@@ -1,7 +1,7 @@
 body {
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #fff7d6;
-  background: radial-gradient(circle, #fff7d6 0%, #c1dbfa 100%); }
+  background-image: url("../images/bckmagicethegahtering.jpg");
+  background-size: cover; }
 
 a {
   color: #00B7FF; }
@@ -15,5 +15,9 @@ a {
 h2 {
   text-align: center;
   padding-bottom: 20px; }
+
+.container {
+  padding-top: 95px;
+  padding-bottom: 95px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -97,13 +97,7 @@ document.addEventListener(
     initMap()
 
 
-    /// Event list for card Serach Button in Layout
-    if (searchButton) {
-
-      searchButton.onclick = function () {
-        alert("Alert!");
-      };
-    }
+ 
 
     //// Event listenr for search bar in Cardfinder
     if (theButton) {

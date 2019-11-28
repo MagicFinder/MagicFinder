@@ -32,7 +32,7 @@
     
     {{!-- {{ message }} --}}
     <div class="col-sm-6 centered-form">
-      <h2>Regístrate</h2>
+      <h2>Sign Up</h2>
       <form action="/auth/signup" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <label for="username">Username</label>
@@ -41,6 +41,14 @@
         <div class="form-group">
           <label for="email">Email</label>
           <input type="text" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">City</label>
+          <input type="text" name="city" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="city">Adress</label>
+          <input type="text" name="adress" class="form-control">
         </div>
         <div class="form-group">
           <label for="password">Password</label>

@@ -42,6 +42,8 @@ app.use("/auth", authRoutes);
 
 app.use("/events", require("./routes/event.routes"));
 
+app.use("/market", require("./routes/market.routes"));
+
 app.use("/cardfinder", require("./routes/cardfinder.routes"));
 
 module.exports = app;

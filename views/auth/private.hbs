@@ -9,6 +9,11 @@
         <h5>Your Contact method</h5>
         <p>email: {{allCards.email}}</p>
       </p>
+<p>adress: {{allCards.adress}}</p>
+
+<p>city: {{allCards.city}}</p>
+
+      <a href="privatepage/edit/{{allCards._id}}"" class="btn btn-primary">Edit profile</a>
     </div>
     <div class="col-md-6">
       <img alt="profile image" src="{{allCards.imgPath}}">
@@ -17,74 +22,48 @@
   <div class="row">
     <div class="col-md-12">
       <h5>Your Cards</h5>
-      
-
-  {{#each allCards.cards}}
-<div class="row">
-<div class="col-md-6">
 
 
-  <b>Card id:</b>
-  <p>{{_id}}</p>
-  <br>
-  <b>Card Name:</b>
-  <p>{{cardName}}</p>
-  <br>
-  <img alt="cardImage" src="{{cardImage}}">
-  <br>
-  <b>Card Description:</b>
-  <p>{{cardDesc}}</p>
-  <br>
-  <b>Card Rarity:</b>
-  <p>{{cardRarity}}</p>
-  <br>
-  <b>Card Price:</b>
-  <p>{{cardPrice}}</p>
-    </div>
-    <div class="col-md-6"></div>
-</div>
-  {{/each}}
+      {{#each allCards.cards}}
+      <div class="row">
+        <div class="col-md-6">
 
 
+          <b>Card id:</b>
+          <p>{{_id}}</p>
+          <br>
+          <b>Card Name:</b>
+          <p>{{cardName}}</p>
+          <br>
+          <img alt="cardImage" src="{{cardImage}}">
+          <br>
+          <b>Card Description:</b>
+          <p>{{cardDesc}}</p>
+          <br>
+          <b>Card Rarity:</b>
+          <p>{{cardRarity}}</p>
+          <br>
+          <b>Card Price:</b>
+          <p>{{cardPrice}}</p>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
 
+      <a href="privatepage/delete/{{_id}}" class="btn btn-dark">Delete card</a>
+      <a href="privatepage/sell/{{_id}}" class="btn btn-warning">Sell card</a>
 
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-{{!-- <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <h2>Personal Page</h2>
-
-      <p>Here you can edit your profile data, create you personal card collection</p>
-
-      <p>Welcome to your personal page {{allCards.username}}</p>
-
-      <img src="{{allCards.imgPath}}" alt="">
-
-
-      <h5>Your Contact method</h5>
-      <p>email: {{allCards.email}}</p>
-
-
-      <h5>Your Cards</h5>
-
-      {{#each allCards}}
-      <p>{{_id}}</p>
       {{/each}}
     </div>
-
-
   </div>
-</div> --}}
+</div>
+
+
+
+
+
+
+
+
+
+
+    

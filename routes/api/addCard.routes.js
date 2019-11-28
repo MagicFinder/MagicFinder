@@ -22,26 +22,18 @@ router.post("/addCard", (req, res) => {
     cardPrice
   });
 
-  // Card.create({
-  //   cardSummary
-  //   // cardName: "X",
-  //   // cardImage: "X",
-  //   // cardDesc: "X",
-  //   // cardRarity: "X",
-  //   // cardPrice: "X"
-
-  // })
   newCard
     .save()
     .then(newCard => {
       console.log("card created ---->" + newCard);
+      // res.render("cardfinder", { message: "card created" })
 
       User.findByIdAndUpdate(req.user._id, {
         $addToSet: { cards: newCard._id }
       })
         .then(user => {
           console.log(user);
-          res.render("cardfinder");
+          res.render("cardfinder", { message: "card created" });
         })
         .catch(err => console.log(err));
     })
