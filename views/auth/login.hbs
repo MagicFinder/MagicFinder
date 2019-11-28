@@ -6,19 +6,22 @@
   
 </div>
 
-    <div class="col-6  text-center loginform">
+    <div class="col-sm-6  centered-form">
 
 
 <h2>Login</h2>
 
 <form action="/auth/login" method="POST" id="form-container">
+<div class="form-group">
   <label for="username">Username</label>
   <input id="username" type="text" name="username" placeholder="JonSnow">
+</div>
 
   <br><br>
-
+<div class="form-group">
   <label for="password">Password</label>
   <input id="password" type="password" name="password" placeholder="Your password">
+</div>
   <br>
   {{#if message }}
     <div class="error-message">{{ message }}</div>
@@ -26,7 +29,7 @@
 
   <br><br>
 
-  <button>Login</button>
+  <button type="button" class="btn btn-success">Login</button>
 
   <p class="account-message">
     Don't have an account yet?
