@@ -8,6 +8,10 @@ document.addEventListener(
     let addCrd = document.getElementById("addcard")
     let searchButton = document.getElementById("search-button")
     let theButton = document.getElementById("theButton")
+    let cardShop = document.getElementById("cardShop")
+
+    let btBlue = document.getElementById("btBlue")
+    let btBlack = document.getElementById("btBlack")
 
 
     if (addCrd) {
@@ -29,6 +33,15 @@ document.addEventListener(
           .catch(err => console.log(err))
 
       };
+    }
+
+    if (btBlue) {
+      btBlue.onclick = (e) => {
+        let color = btBlue.getAttribute("id")
+
+        axios.get("/api/filter")
+
+      }
     }
 
 
@@ -95,6 +108,44 @@ document.addEventListener(
     console.log('Script.js ok');
 
     initMap()
+
+    // axios.get("https://api.scryfall.com/cards?page=3")
+    //   .then(res => {
+    //     console.log(res.data.data[0])
+    //     axios.get("http://localhost:3000/index", {
+    //         params: {
+    //           info: res.data.data[0]
+    //         }
+    //       })
+    //       .then(res => {
+    //         // console.log(res)
+    //         // cardShop = res.data.data.splice(0, 20)
+
+    //       })
+    //       .catch(err => console.log(err))
+
+
+
+    //     // for (let i=0 ; i<30 ; i++){
+    //     //   console.log(cardShop)
+    //     //   let img = document.createElement("img")
+    //     //   let name = document.createElement("h4")
+    //     //   let price = document.createElement("p")
+    //     //   let detBtn = document.createElement("button")
+    //     //   img.src = `${res.data.data[i].image_uris.small}`
+    //     //   name.innerHTML = `${res.data.data[i].name}`
+    //     //   price.innerHTML = `${res.data.data[i].prices.eur}`+" €"
+    //     //   detBtn.innerHTML = "Ver detalles"
+    //     //   cardShop.appendChild(img)
+    //     //   cardShop.appendChild(name)
+    //     //   cardShop.appendChild(price)
+    //     //   cardShop.appendChild(detBtn)
+    //     //   }
+
+
+    //   })
+    //   .catch(err => console.log(err))
+
 
 
     /// Event list for card Serach Button in Layout

@@ -44,4 +44,6 @@ app.use("/events", require("./routes/event.routes"));
 
 app.use("/cardfinder", require("./routes/cardfinder.routes"));
 
+app.use("/cardDetail", require("./routes/cardDetail.routes"));
+
 module.exports = app;
