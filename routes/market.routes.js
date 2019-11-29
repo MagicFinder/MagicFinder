@@ -10,7 +10,11 @@ router.get("/", function (req, res) {
     .populate("cardonsale")
     .then(allUsers => {
       console.log(allUsers);
-      res.render("market", { users: allUsers });
+      res.render("market", { 
+        users: allUsers,
+        user: req.user
+      });
+      
     })
 
     .catch(err => console.log("Error consultando la BBDD: ", err));

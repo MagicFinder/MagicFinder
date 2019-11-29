@@ -96,7 +96,10 @@ router.get("/logout", (req, res) => {
 router.get("/privatepage", ensureLogin.ensureLoggedIn(), (req, res) => {
   User.findById(req.user._id)
     .populate("cards")
-    .then(allCards => res.render("auth/private", { allCards }))
+    .then(allCards => res.render("auth/private", { 
+      allCards,
+      user: req.user
+     }))
     .catch(err => console.log(err));
 });
 
