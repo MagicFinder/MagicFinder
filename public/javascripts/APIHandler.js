@@ -5,30 +5,41 @@ const restMagicApi = axios.create({
 });
 
 function getMagicInfo(theName) {
+  console.log(theName)
   restMagicApi
     .get(theName)
     .then(responseFromAPI => {
       console.log("Response from API is: ", responseFromAPI.data);
       removeErrDiv();
       const cardName = responseFromAPI.data.name;
-      const cardId = responseFromAPI.data.id;
-      const cardImage = responseFromAPI.data.image_uris.small;
+      // const cardId = responseFromAPI.data.id;
+      const cardImage = responseFromAPI.data.image_uris.png;
       const cardDesc = responseFromAPI.data.oracle_text;
       const cardRarity = responseFromAPI.data.rarity
-      const cardPrice = responseFromAPI.data.prices.usd ////mas de un valor ?
-      
+      const cardPrice = responseFromAPI.data.prices.eur ////mas de un valor ?
+      const release = responseFromAPI.data.released_at
+      const manaCost = responseFromAPI.data.mana_cost
+      const colorId = responseFromAPI.data.color_identity
+      const legS = responseFromAPI.data.legalities.standard
+      const legL = responseFromAPI.data.legalities.legacy
 
-      
+
       // instead in the console, show data in the browser using JS DOM manipulation:
       document.getElementById("cardName").innerHTML = cardName;
-      document.getElementById("cardId").innerHTML = "Card ID: " + cardId;
+      // document.getElementById("cardId").innerHTML = "Card ID: " + cardId;
       document.getElementById("cardImage").src = cardImage;
       document.getElementById("cardDesc").innerHTML = cardDesc
-      document.getElementById("rarity").innerHTML = cardRarity;
-      document.getElementById("price").innerHTML = cardPrice;
+      document.getElementById("rarity").innerHTML = ` <strong>Rarity:</strong> ${cardRarity}`;
+      document.getElementById("release").innerHTML = `<strong>Release:</strong> ${release}`;
+      document.getElementById("manaCost").innerHTML = `<strong>Mana cost:</strong> ${manaCost}`
+       document.getElementById("colorId").innerHTML = `<strong>Color:</strong> ${colorId}`
+      document.getElementById("legS").innerHTML = `<strong>Standard:</strong> ${legS}`
+      document.getElementById("legL").innerHTML = `<strong>Legacy:</strong> ${legL}`
+      
+      document.getElementById("price").innerHTML = `<strong>Price:</strong> ${cardPrice}<strong> €</strong>`;
     })
     .catch(err => {
-      if (err.response.status === 404) {        
+      if (err.response.status === 404) {
         removeCardInfo();
         createDiv();
         const theErr = document.createTextNode(`Carta no encontrada `);
@@ -75,6 +86,3 @@ function checkInput() {
 //   const card = document.getElementById("theInput").value;
 //   getMagicInfo(card);
 // };
-
-  
-  

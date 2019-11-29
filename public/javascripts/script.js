@@ -72,7 +72,7 @@ document.addEventListener(
     function printMap(coords, arr) {
 
       const myMap = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
+        zoom: 11,
         center: {
           lat: coords.latitude,
           lng: coords.longitude

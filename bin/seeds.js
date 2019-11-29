@@ -2,6 +2,7 @@
 
 // To execute this seed, run from the root of the project
 // $ node bin/seeds.js
+require("dotenv").config();
 
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
@@ -11,7 +12,8 @@ const Event = require("../models/Event.model")
 const bcryptSalt = 10;
 
 mongoose
-  .connect("mongodb+srv://victor:victor1@cluster0-stbd0.mongodb.net/test?retryWrites=true&w=majority", {
+  // .connect("mongodb+srv://victor:victor1@cluster0-stbd0.mongodb.net/test?retryWrites=true&w=majority", {
+    .connect(process.env.DBL, {
     useNewUrlParser: true
   })
   .then(x => {
@@ -53,7 +55,7 @@ let events = [{
     description: "final del campeonato mundial de Magic",
     lugar: "Centro de convenciones IFEMA",
     phone: 9135246525,
-    date: 25 / 03 / 2020,
+    date: "25 / 03 / 2020",
     location: {
       coordinates: [40.467443, -3.6190877]
 
@@ -64,7 +66,7 @@ let events = [{
     description: " Tercera jornada de la liga local",
     lugar: "Centro dotacional de arganzuela",
     phone: 913523425,
-    date: 12 / 05 / 2020,
+    date: "12 / 05 / 2020",
     location: {
       coordinates: [40.4027972, -3.698186]
 
@@ -73,9 +75,9 @@ let events = [{
   {
     title: "Torneo amateur de la comunidad de Madrid",
     description: "Torneo clasificatorio para el acceso a la liga profesional de Magic",
-    lugar: "Plaza de toros de las Ventas",
+    lugar: "Facultad de medicina, ciudad universitaria",
     phone: 9135234432,
-    date: 11 / 12 / 2019,
+    date: "11 / 12 / 2019",
     location: {
       coordinates: [40.450639, -3.7426786]
 

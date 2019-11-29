@@ -1,5 +1,5 @@
 body {
-  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'MedievalSharp', cursive;
   background-image: url("../images/bckmagicethegahtering.jpg");
   background-size: cover; }
 
@@ -20,7 +20,7 @@ h2 {
   padding-bottom: 20px; }
 
 .idxTitle {
-  padding: 30px 30px 0 30px;
+  padding: 86px 30px 0 30px;
   text-align: center;
   font-weight: bold;
   font-size: 6em; }
@@ -37,7 +37,7 @@ h2 {
 
 .card-price {
   text-align: center;
-  background-color: aqua;
+  background-color: #28a745;
   padding: 10px; }
 
 .imgDetail {
@@ -61,5 +61,54 @@ h2 {
 .fiter {
   display: flex;
   justify-content: space-evenly; }
+
+.h1DetSearch {
+  text-align: center; }
+
+.imgDetailSearch {
+  width: 100%; }
+
+.searchDiv {
+  margin: 0 auto;
+  align-items: center; }
+
+.anchor:hover {
+  text-decoration: none;
+  color: white; }
+
+.anchor {
+  color: white; }
+
+li {
+  list-style: none; }
+
+.h1finder {
+  font-weight: bold;
+  padding-top: 66px; }
+
+.profilePhoto {
+  width: 100%; }
+
+.h3cards {
+  text-align: center;
+  font-weight: bold; }
+
+.profRow {
+  padding-top: 20px; }
+
+.paddingB {
+  margin-bottom: 20px; }
+
+.centerB {
+  display: flex;
+  justify-content: space-around; }
+
+.navBar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%; }
+
+li {
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */
