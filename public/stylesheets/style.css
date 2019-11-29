@@ -1,10 +1,13 @@
 body {
-  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "MedievalSharp", cursive;
   background-image: url("../images/bckmagicethegahtering.jpg");
   background-size: cover; }
 
 a {
   color: #00b7ff; }
+
+.loginform {
+  padding: 30px 0; }
 
 #map {
   height: 500px; }
@@ -59,40 +62,60 @@ h2 {
   display: flex;
   justify-content: space-evenly; }
 
-.container-login {
-  margin-top: 30px;
-  background: linear-gradient(90deg, rgba(15, 15, 15, 0.517244) 0%, rgba(10, 1, 2, 0.968225) 100%);
-  color: white;
-  border-radius: 10px; }
+.h1DetSearch {
+  text-align: center; }
 
-.container-login .row {
-  padding: 20px; }
+.imgDetailSearch {
+  width: 100%; }
 
-.container-signup {
-  margin-top: 30px;
-  background: linear-gradient(90deg, rgba(15, 15, 15, 0.517244) 0%, rgba(10, 1, 2, 0.968225) 100%);
+.searchDiv {
+  margin: 0 auto;
+  align-items: center; }
+
+.anchor:hover {
+  text-decoration: none;
+  color: white; }
+
+.anchor {
+  color: white; }
+
+li {
+  list-style: none; }
+
+.h1finder {
+  font-weight: bold;
+  padding-top: 66px; }
+
+.profilePhoto {
+  width: 100%; }
+
+.h3cards {
+  text-align: center;
+  font-weight: bold; }
+
+.profRow {
+  padding-top: 20px; }
+
+.paddingB {
+  margin-bottom: 20px; }
+
+.centerB {
+  display: flex;
+  justify-content: space-around; }
+
+.navBar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%; }
+
+li {
+  margin-bottom: 0; }
+
+.blackstyleform {
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border-radius: 10px;
   padding: 20px; }
-
-.card-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.card-info {
-  display: flex;
-  justify-content: space-between; }
-
-.card-img-top {
-  width: auto; }
-
-.card-image-details {
-  width: 50%;
-  display: flex;
-  align-items: flex-start; }
-
-.inlinedisplay {
-  display: inline-flex; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User.model");
+const ensureLogin = require("connect-ensure-login");
 
-router.get("/", function(req, res) {
+
+router.get("/", function (req, res) {
+  
   User.find()
     .populate("cardonsale")
     .then(allUsers => {

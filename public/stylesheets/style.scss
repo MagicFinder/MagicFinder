@@ -1,7 +1,6 @@
 body {
   // font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-family: 'MedievalSharp',
-    cursive;
+  font-family: "MedievalSharp", cursive;
   background-image: url("../images/bckmagicethegahtering.jpg");
   background-size: cover;
   // height: 100vh -56px;
@@ -9,7 +8,7 @@ body {
   // background: radial-gradient(circle, rgba(255, 247, 214, 1) 0%, rgba(193, 219, 250, 1) 100%);
 }
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 .loginform {
   padding: 30px 0;
@@ -44,7 +43,7 @@ h2 {
 }
 .card-price {
   text-align: center;
-  background-color: #28A745;
+  background-color: #28a745;
   padding: 10px;
 }
 .imgDetail {
@@ -120,4 +119,12 @@ li {
 // }
 li {
   margin-bottom: 0;
+}
+
+.blackstyleform {
+margin-top: 100px;
+background: rgba(0, 0, 0, 0.5);
+color: white;
+border-radius: 10px;
+padding: 20px
 }
