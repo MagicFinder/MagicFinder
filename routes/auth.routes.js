@@ -111,7 +111,10 @@ router.get("/privatepage/delete/:id", ensureLogin.ensureLoggedIn(), (req, res) =
   console.log(req.params.id);
 
   User.findByIdAndUpdate(req.user._id,  {
-    $pull: { cards: req.params.id }
+    $pull: { 
+    cards: req.params.id,
+    cardonsale:req.params.id
+  }
   })
     .then(() => res.redirect("/auth/privatepage"))
     .catch(err => console.log(err));  
