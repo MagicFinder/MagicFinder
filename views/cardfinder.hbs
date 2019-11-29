@@ -1,12 +1,13 @@
-<div class="container">
-  <div class="col-md-6 col-md-offset-3">
+<div class="container finderH">
     <div class="row">
-      <div id="logo" class="text-center">
-        <h1>Mtg Card finder</h1>
-        <p>your manin MtG companion app!</p>
+      <div class="col-md-3"></div>
+      <div class="col-md-6 ">
+        <div id="logo" class="text-center">
+          <h1 class="h1finder">Mtg Card finder</h1>
+        {{!-- <p>your manin MtG companion app!</p> --}}
       </div>
 
-      <div class="form-group">
+      <div id="search" class="form-group">
         <div class="input-group">
           <input id="theInput" onkeyup="checkInput()" class="form-control" type="text" name="search"
             placeholder="Search..." required />
@@ -23,7 +24,7 @@
       </div>
     </div>
   </div>
-  <h2 id="cardName"></h2>
+  {{!-- <h2 id="cardName"></h2>
   <p id="cardId"></p>
   <img id="cardImage" src="">
   <h5>Card Text</h5>
@@ -31,11 +32,69 @@
   <h5>Rarity</h5>
   <p id="rarity"></p>
   <h5>Price</h5>
-  <p id="price"></p>
+  <p id="price"></p> --}}
 
-  {{#if user}}
-  <button type="button" class="btn btn-dark" id="addcard">Add card</button>
-  {{/if}}
+
+<h1 id="cardName" class="h1DetSearch"> </h1>
+{{!-- <p id="cardId"></p> --}}
+
+
+
+<div class="container">
+
+  <div id="" class="row">
+
+
+
+    <div class="col-md-3">
+
+      {{!-- <img id="cardImage" class="imgDetail" src="{{card.image_uris.png}}" alt="{{name}}"> --}}
+      <img id="cardImage" class="imgDetailSearch" src="">  
+
+    </div>
+
+    <div class="col-md-8">
+      <h2 class="h2Det">Details</h2>
+      <hr>
+      <p id="cardDesc"></p>
+      <p> {{card.oracle_text}} </p>
+      <hr>
+
+       
+
+      <ul>
+        <li> <p id="release"></p></li>
+        <li> <p id="rarity"></p></li>
+        <li><p id="manaCost"></p></li>
+        <li> <p id="colorId"></p> </li>
+        <li> <p id="legS"></p></li>
+        <li> <p id="legL"></p></li>
+      </ul>
+      <hr>
+      <div class="detPrices">
+        <div>
+          <h4 id="price" class="priDet"></h4>
+
+        </div>
+        <div>
+            {{#if user}}
+            <button type="button" class="btn btn-dark btn-lg" id="addcard">Add card</button>
+            {{/if}}
+          <button type="button" class="btn btn-primary btn-lg"> <a class="anchor" href="/cardfinder">Search again</a></button>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+{{!-- .............................................. --}}
+
 </div>
 
 

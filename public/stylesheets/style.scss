@@ -1,139 +1,123 @@
 body {
-  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  // font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'MedievalSharp',
+    cursive;
   background-image: url("../images/bckmagicethegahtering.jpg");
   background-size: cover;
-
+  // height: 100vh -56px;
   // background: rgb(255, 247, 214);
   // background: radial-gradient(circle, rgba(255, 247, 214, 1) 0%, rgba(193, 219, 250, 1) 100%);
 }
-
 a {
-  color: #00b7ff;
+  color: #00B7FF;
 }
-
+.loginform {
+  padding: 30px 0;
+}
 #map {
   height: 500px;
 }
-
 h2 {
   text-align: center;
   padding-bottom: 20px;
 }
-
 #cardCol {
   padding-bottom: 20px;
   //background-color: brown;
 }
-
 .idxTitle {
-  padding: 30px 30px 0 30px;
+  padding: 86px 30px 0 30px;
   text-align: center;
   font-weight: bold;
   font-size: 6em;
+  // margin-top: 5;
 }
-
 .idxTitleP {
   padding-bottom: 50px;
   text-align: center;
   font-size: 2.5em;
 }
-
 .card-name {
   text-align: center;
   padding-bottom: 20px;
   font-weight: bold;
 }
-
 .card-price {
   text-align: center;
-  background-color: aqua;
+  background-color: #28A745;
   padding: 10px;
 }
-
 .imgDetail {
   width: 100%;
 }
-
 .h1Det {
   text-align: center;
   padding: 20px;
 }
-
 .h2Det {
   padding: 0;
 }
-
 .priDet {
   text-align: center;
   padding-top: 10px;
 }
-
 .detPrices {
   display: flex;
   justify-content: space-around;
 }
-
 .fiter {
   display: flex;
   justify-content: space-evenly;
 }
-
-//// LOGIN SECTION
-
-.container-login {
-  margin-top: 30px;
-  background: linear-gradient(
-    90deg,
-    rgba(15, 15, 15, 0.5172443977591037) 0%,
-    rgba(10, 1, 2, 0.9682247899159664) 100%
-  );
+.h1DetSearch {
+  text-align: center;
+}
+.imgDetailSearch {
+  width: 100%;
+}
+.searchDiv {
+  margin: 0 auto;
+  align-items: center;
+}
+.anchor:hover {
+  text-decoration: none;
   color: white;
-  border-radius: 10px;
 }
-
-.container-login .row {
-  padding: 20px;
-}
-
-///SIGN UP
-.container-signup {
-  margin-top: 30px;
-  background: linear-gradient(
-    90deg,
-    rgba(15, 15, 15, 0.5172443977591037) 0%,
-    rgba(10, 1, 2, 0.9682247899159664) 100%
-  );
+.anchor {
   color: white;
-  border-radius: 10px;
-  padding: 20px;
 }
-
-
-
-
-.card-flex {
+li {
+  list-style: none;
+}
+.h1finder {
+  font-weight: bold;
+  padding-top: 66px;
+}
+.profilePhoto {
+  width: 100%;
+}
+.h3cards {
+  text-align: center;
+  font-weight: bold;
+}
+.profRow {
+  padding-top: 20px;
+}
+.paddingB {
+  margin-bottom: 20px;
+}
+.centerB {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
-
-.card-info {
-  display: flex;
-  // flex-drection: column;
-  justify-content: space-between;
+.navBar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
-
-.card-img-top {
-  width: auto;
-}
-
-.card-image-details {
-  width: 50%;
-  display: flex;
-  align-items: flex-start
-}
-
-
-.inlinedisplay {
-  display: inline-flex;
+// .finderH {
+//   min-height: 200px;
+// }
+li {
+  margin-bottom: 0;
 }

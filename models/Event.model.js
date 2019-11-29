@@ -6,7 +6,7 @@ const eventSchema = new Schema({
   description: String,
   lugar: String,
   phone: String,
-  date: Date,
+  date: String,
   location: {type: {type: String},coordinates: [Number]}},
   {
     timestamps: true

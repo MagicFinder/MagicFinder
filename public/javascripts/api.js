@@ -3,8 +3,8 @@ const axios = require("axios")
 const api = {
   // url: ,
   getCards() {
-    // return axios.get("https://api.scryfall.com/cards?page=800")
-    return axios.get("https://api.scryfall.com/cards?color=U")
+    return axios.get("https://api.scryfall.com/cards?page=816")
+      // return axios.get("https://api.scryfall.com/cards?color=U")
 
 
       .then(res => res.data)
