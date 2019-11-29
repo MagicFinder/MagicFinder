@@ -1,44 +1,42 @@
+<div class="container ">
+  {{!-- <div class="container-login"> --}}
+    <div class="row">
 
-<div class="container">
-  <div class="row">
+      <div class="col-sm-3">
 
-<div class="col-sm">
-  
-</div>
+      </div>
 
-    <div class="col-sm-6  centered-form">
+      <div class="col-sm-6  centered-form text-center container-login">
+        <h2>Login</h2>
+        <form action="/auth/login" method="POST" id="form-container">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" placeholder="JonSnow" class="form-control">
+          </div>
 
+          <br><br>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
+          </div>
+          <br>
+          {{#if message }}
+          <div class="error-message">{{ message }}</div>
+          {{/if}}
 
-<h2>Login</h2>
+          <br><br>
 
-<form action="/auth/login" method="POST" id="form-container">
-<div class="form-group">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
-</div>
+          <button type="submit" class="btn btn-success btn-sm">Login</button>
 
-  <br><br>
-<div class="form-group">
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-</div>
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
+          <p class="account-message">
+            Don't have an account yet?
+            <a href="/auth/signup">Signup</a>
+          </p>
+        </form>
+      </div>
+      <div class="col-sm-3">
 
-  <br><br>
-
-  <button type="button" class="btn btn-success">Login</button>
-
-  <p class="account-message">
-    Don't have an account yet?
-    <a href="/auth/signup">Signup</a>
-  </p>
-</form>
+      </div>
     </div>
-    <div class="col-sm">
-      
-    </div>
-  </div>
+  {{!-- </div> --}}
 </div>

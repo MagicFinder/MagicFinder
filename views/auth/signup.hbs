@@ -1,37 +1,12 @@
-{{!-- <h2>Signup</h2>
-
-<form action="/auth/signup" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
-
-  <br><br>
-
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-
-
-
-
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
-
-  
-
-  <button>Create account</button>
-
-  <p class="account-message">
-    Do you already have an account?
-    <a href="/auth/login">Login</a>
-  </p>
-</form> --}}
-
-<div class="container">
+<div class="container centered">
+<div class="container-signup">
   <div class="row">
     
-    {{!-- {{ message }} --}}
-    <div class="col-sm-6 centered-form">
+    <div class="col-sm">
+    
+    </div>
+
+    <div class="col-sm-6 centered-form text-center">
       <h2>Sign Up</h2>
       <form action="/auth/signup" method="post" enctype="multipart/form-data">
         <div class="form-group">
@@ -47,7 +22,7 @@
           <input type="text" name="city" class="form-control">
         </div>
         <div class="form-group">
-          <label for="city">Adress</label>
+          <label for="city">Address</label>
           <input type="text" name="adress" class="form-control">
         </div>
         <div class="form-group">
@@ -59,8 +34,11 @@
           </div>
 
         </div>
-        <button type="submit">Signup</button>
+                <button type="submit" class="btn btn-warning btn-sm">Signup</button>
       </form>
     </div>
+    <div class="col-sm">    
+    </div>
   </div>
+</div>
 </div>

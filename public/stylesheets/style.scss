@@ -1,5 +1,4 @@
 body {
-
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("../images/bckmagicethegahtering.jpg");
   background-size: cover;
@@ -9,12 +8,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
-}
-
-
-.loginform {
-  padding: 30px 0;
+  color: #00b7ff;
 }
 
 #map {
@@ -48,14 +42,12 @@ h2 {
   text-align: center;
   padding-bottom: 20px;
   font-weight: bold;
-
 }
 
 .card-price {
   text-align: center;
   background-color: aqua;
   padding: 10px;
-
 }
 
 .imgDetail {
@@ -84,4 +76,64 @@ h2 {
 .fiter {
   display: flex;
   justify-content: space-evenly;
+}
+
+//// LOGIN SECTION
+
+.container-login {
+  margin-top: 30px;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 15, 15, 0.5172443977591037) 0%,
+    rgba(10, 1, 2, 0.9682247899159664) 100%
+  );
+  color: white;
+  border-radius: 10px;
+}
+
+.container-login .row {
+  padding: 20px;
+}
+
+///SIGN UP
+.container-signup {
+  margin-top: 30px;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 15, 15, 0.5172443977591037) 0%,
+    rgba(10, 1, 2, 0.9682247899159664) 100%
+  );
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-info {
+  display: flex;
+  // flex-drection: column;
+  justify-content: space-between;
+}
+
+.card-img-top {
+  width: auto;
+}
+
+.card-image-details {
+  width: 50%;
+  display: flex;
+  align-items: flex-start
+}
+
+
+.inlinedisplay {
+  display: inline-flex;
 }

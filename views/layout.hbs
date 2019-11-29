@@ -19,7 +19,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/">MTG Finder</a>
           </li>
-          
+
           {{#unless user}}
           <li class="nav-item">
             <a class="nav-link" href="/auth/login">Login</a>
@@ -28,10 +28,7 @@
             <a class="nav-link" href="/auth/signup">Signup</a>
           </li>
           {{/unless}}
-         
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/logout">Logout</a>
-          </li>
+
           {{#if user}}
           <li class="nav-item">
             <a class="nav-link" href="/auth/privatepage">myPage</a>
@@ -41,10 +38,17 @@
             <a class="nav-link" href="/cardfinder">Card finder</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/market">Market</a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="/events">Events</a>
           </li>
         </ul>
-        
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/logout">Logout</a>
+        </li>
+
       </div>
     </nav>
 

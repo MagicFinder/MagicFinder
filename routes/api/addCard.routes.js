@@ -5,7 +5,7 @@ const Card = require("../../models/Card.model");
 const User = require("../../models/User.model");
 
 router.post("/addCard", (req, res) => {
-  console.log("holaaa estamos en el back");
+  // console.log("holaaa estamos en el back");
   // console.log(req.body);
   const {
     cardName,
