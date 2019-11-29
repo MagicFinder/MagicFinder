@@ -4,7 +4,10 @@ body {
   background-size: cover; }
 
 a {
-  color: #00b7ff; }
+  color: #00B7FF; }
+
+.loginform {
+  padding: 30px 0; }
 
 .loginform {
   padding: 30px 0; }
@@ -37,7 +40,7 @@ h2 {
 
 .card-price {
   text-align: center;
-  background-color: #28a745;
+  background-color: #28A745;
   padding: 10px; }
 
 .imgDetail {
@@ -117,5 +120,16 @@ li {
   color: white;
   border-radius: 10px;
   padding: 20px; }
+
+
+.profM {
+  padding-top: 66px; }
+
+.imdD {
+  width: 100%; }
+
+.borderB {
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */
